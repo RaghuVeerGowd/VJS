@@ -383,7 +383,7 @@ img{
 	cursor: text;
 }
 .search-area input[type="submit"] {
-	background-image: url("assets/images/search-icon.png");
+	background-image: url("search-icon.png");
 	background-position: center center;
 	background-repeat: no-repeat;
 	border: medium none;

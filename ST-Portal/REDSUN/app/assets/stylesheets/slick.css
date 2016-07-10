@@ -120,11 +120,10 @@
 /*=============================================================================*/
 @charset 'UTF-8';
 /* Slider */
-/*.slick-loading .slick-list
+.slick-loading .slick-list
 {
-    background: #fff url('/ajax-loader.gif') center center no-repeat;
-}*/
-
+    background: #fff url("vjs.png") center center no-repeat;
+}
 /* Icons */
 @font-face
 {
