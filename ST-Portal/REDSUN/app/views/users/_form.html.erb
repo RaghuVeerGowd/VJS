@@ -1,0 +1,203 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <h3>Personal info</h3>  
+  <div class="form-group">
+    <label class="col-lg-3 control-label">First name:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :first_name,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Email:</label>
+    <div class="col-lg-8">
+      <%= f.email_field :email, autofocus: true ,:class => "form-control" %></br>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Password:</label>
+    <div class="col-lg-8">
+      <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "off" ,:class => "form-control" %></br>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Password Confirmation:</label>
+    <div class="col-lg-8">
+      <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %>
+      <%= f.password_field :password_confirmation, autocomplete: "off" ,:class => "form-control" %></br>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Phone Number:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :phone_number,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Register Number:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :register_number,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Joining Date:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :joining_date,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Course:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :course,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">DOB:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :date_of_birth,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Gender:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :gender,:class => "form-control" %></br>
+    </div>
+  </div>
+    <div class="form-group">
+    <label class="col-lg-3 control-label">Father Name:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :father_name,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Father Job:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :father_job,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Mother Name:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :mother_name,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">MOther Job:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :mother_job,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Blood group:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :blood_group,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Birth Place:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :birth_place,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Nationality:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :nationality,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Mother Tongue:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :mother_tongue,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Category:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :category,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Religion:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :religion,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Present Address:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :present_address,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Permanent Address:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :permanent_address,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">City:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :city,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Pincode:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :pincode,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Country:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :country,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Previous Institute:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :previous_institute_name,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Previous Institute Address:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :previous_institute_address,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-lg-3 control-label">Previous Institute Grade:</label>
+    <div class="col-lg-8">
+      <%= f.text_field :previous_institute_grade,:class => "form-control" %></br>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-3 control-label"></label>
+    <div class="col-md-8">
+      <%= f.submit "Save Changes" ,class: "btn btn-primary" %>
+      <span></span>
+      <%= link_to 'Cancel' ,users_path,class: "btn btn-primary" %>
+      <!-- <input type="reset" class="btn btn-default" value="Cancel"> -->
+    </div>
+  </div>
+<% end %>
+
+
+
