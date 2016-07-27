@@ -7,3 +7,12 @@ development:
   password: iamraghu
   host: localhost
   port: 5432
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: redsun_db
+  pool: 5
+  username: iamraghu
+  password: iamraghu
+  host: localhost
+  port: 5432
